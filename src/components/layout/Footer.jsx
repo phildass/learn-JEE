@@ -12,10 +12,34 @@ function Footer() {
               </div>
               <h3 className="text-white text-xl font-display font-bold">Learn JEE</h3>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
               Your comprehensive platform for JEE Main and Advanced preparation.
               Master Physics, Chemistry, and Mathematics with structured modules.
             </p>
+            
+            {/* Branding Section */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <img 
+                  src="/images/iiskills.png" 
+                  alt="Indian Institute of Professional Skills Development" 
+                  className="h-6 w-auto opacity-80"
+                />
+                <span className="text-xs text-gray-400">
+                  Indian Institute of Professional Skills Development
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <img 
+                  src="/images/ai-cloud.png" 
+                  alt="AI Cloud Enterprises" 
+                  className="h-6 w-auto opacity-80"
+                />
+                <span className="text-xs text-gray-400">
+                  AI Cloud Enterprises
+                </span>
+              </div>
+            </div>
           </div>
           
           <div>

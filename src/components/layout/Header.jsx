@@ -6,6 +6,37 @@ function Header() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
+      {/* Branding Section */}
+      <div className="bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex flex-wrap items-center gap-6 justify-start">
+            {/* iiskills branding */}
+            <div className="flex items-center gap-2">
+              <img 
+                src="/images/iiskills.png" 
+                alt="Indian Institute of Professional Skills Development" 
+                className="h-8 w-auto"
+              />
+              <span className="text-xs text-gray-700 font-medium hidden sm:inline">
+                Indian Institute of Professional Skills Development
+              </span>
+            </div>
+            
+            {/* AI Cloud branding */}
+            <div className="flex items-center gap-2">
+              <img 
+                src="/images/ai-cloud.png" 
+                alt="AI Cloud Enterprises" 
+                className="h-8 w-auto"
+              />
+              <span className="text-xs text-gray-700 font-medium hidden sm:inline">
+                AI Cloud Enterprises
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo Section */}

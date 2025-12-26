@@ -11,6 +11,35 @@ function About() {
       </section>
 
       <div className="container mx-auto px-4 py-12">
+        {/* Branding Section */}
+        <section className="mb-12 max-w-4xl mx-auto bg-gray-50 p-6 rounded-lg">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Our Partners</h2>
+          <div className="flex flex-wrap items-center gap-6">
+            <div className="flex items-center gap-3">
+              <img 
+                src="/images/iiskills.png" 
+                alt="Indian Institute of Professional Skills Development" 
+                className="h-10 w-auto"
+              />
+              <span className="text-sm text-gray-700 font-medium">
+                Indian Institute of Professional Skills Development
+              </span>
+            </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/images/ai-cloud.png" 
+                alt="AI Cloud Enterprises" 
+                className="h-10 w-auto"
+              />
+              <span className="text-sm text-gray-700 font-medium">
+                AI Cloud Enterprises
+              </span>
+            </div>
+          </div>
+          {/* Placeholder for future branding assets */}
+          {/* Add additional partner logos here as they become available */}
+        </section>
+
         <section className="mb-12 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Mission</h2>
           <p className="text-lg text-gray-700 mb-4">
