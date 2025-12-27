@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
@@ -109,12 +111,39 @@ function Header() {
             <Link to="/analytics" className="px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition font-medium">
               Analytics
             </Link>
-            <Link 
-              to="/contact" 
-              className="ml-2 px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition shadow-md hover:shadow-lg font-medium"
-            >
-              Contact
-            </Link>
+            
+            {/* Auth Buttons */}
+            {user ? (
+              <>
+                <Link 
+                  to="/dashboard" 
+                  className="ml-2 px-5 py-2 rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition font-medium"
+                >
+                  Dashboard
+                </Link>
+                <button
+                  onClick={logout}
+                  className="px-5 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition font-medium"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link 
+                  to="/login" 
+                  className="ml-2 px-5 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition font-medium"
+                >
+                  Login
+                </Link>
+                <Link 
+                  to="/register" 
+                  className="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition shadow-md hover:shadow-lg font-medium"
+                >
+                  Register
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
