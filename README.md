@@ -302,6 +302,19 @@ Planned features for future releases:
 - XSS protection through React
 - CORS configuration
 
+### Security Notes for Production
+
+⚠️ **Important**: This is an MVP implementation. Before deploying to production, implement:
+
+1. **Rate Limiting**: Add express-rate-limit to prevent brute force attacks
+2. **Input Sanitization**: Add additional validation and sanitization
+3. **HTTPS**: Always use HTTPS in production
+4. **Environment Variables**: Store JWT_SECRET and other secrets securely
+5. **CSRF Protection**: Add CSRF tokens for state-changing operations
+6. **SQL Injection Protection**: Already implemented via prepared statements
+7. **Session Management**: Consider adding refresh tokens
+8. **Logging**: Add comprehensive security logging and monitoring
+
 ## Contributing
 
 To contribute to this project:
